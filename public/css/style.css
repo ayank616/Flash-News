@@ -1,0 +1,239 @@
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+.container {
+  flex: 1;
+}
+
+/* Navbar */
+.navbar {
+  background-color: black;
+  height: 60px;
+
+  border-radius: 0 0 16px 16px;
+  padding: 0.5rem;
+}
+
+.navbar-brand {
+  font-weight: 500;
+  color: #009970;
+  font-size: 24px;
+  transition: 0.3s ease-in-out;
+}
+
+.navbar-toggler {
+  border: none;
+}
+
+.navbar-toggler:focus,
+.btn-close:focus {
+  outline: none;
+  box-shadow: none;
+}
+.nav-link {
+  color: #666777;
+  font-weight: 500;
+  position: relative;
+}
+.nav-link:hover,
+.nav-link.active {
+  color: white;
+}
+@media (min-width: 991px) {
+  .nav-link::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    background-color: #009970;
+    visibility: hidden;
+    transition: 0.3s ease-in-out;
+  }
+  .nav-link:hover::before {
+    width: 100%;
+    visibility: visible;
+  }
+}
+
+.dropdown-menu {
+  border: none;
+  background-color: black;
+  border-radius: 0 0 16px 16px;
+  padding: 1rem;
+}
+.dropdown-menu a {
+  color: white;
+}
+.dropdown-menu a:hover {
+  color: #009970;
+  transition: 0.3s ease-in-out;
+}
+
+/* Dark-Mode */
+
+label {
+  position: absolute;
+  /* width: 45px; */
+  /* height: 24px; */
+  width: 2.7em;
+  height: 1.5em;
+  /* right: 20px;
+  top: 20px; */
+  right: 1em;
+  top: 1.2em;
+  border: 2px solid ;
+  border-radius: 1em;
+  background-color: grey;
+}
+label::before{
+  position: absolute;
+  content: "";
+  width: 20px;
+  height: 20px;
+  left: 1px;
+  top: 1px;
+  border-radius: 50%;
+  cursor: pointer;
+  background: #000;
+  transition: 0.4s;
+}
+label.active:before{
+  left: 24px;
+  background: #fff;
+}
+label.night{
+  background: #000;
+  color: grey;
+}
+
+/* Footer */
+.f-info {
+  height: 8rem;
+  background-color: black;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: space-evenly;
+  text-align: center;
+}
+
+.f-socials,
+.f-info-links,
+.f-brand {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.f-socials i {
+  font-size: 1.5rem;
+  margin: 0 0.5rem;
+  color: white;
+}
+.f-socials i:hover,
+.f-info-links a:hover {
+  color: #009970;
+  transition: 0.3s ease-out;
+}
+
+.f-info-links a {
+  text-decoration: none;
+  color: #666777;
+  margin: 0 0.5rem;
+  font-size: small;
+}
+
+/* about */
+.btn-1 {
+  background-color: #017c5b;
+}
+
+.btn-1:hover {
+  color: #017c5b;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+.btn-2:hover {
+  background-color: #017c5b;
+  font-size: 1.2rem;
+  font-weight: 500;
+  border: none;
+}
+
+/* More / Pricing */
+.p-btn-1 {
+  color: #009970;
+  border: 1px solid #009970;
+}
+.p-btn-1:hover {
+  background-color: #009970;
+  color: white;
+  font-weight: 500;
+  border: 1px solid #009970;
+  transition: 0.3s ease-in-out;
+}
+.p-btn-2 {
+  background-color: #009970;
+  border: 1px solid #009970;
+}
+.p-btn-2:hover {
+  background-color: transparent;
+  border: 1px solid #009970;
+  color: #009970;
+  font-weight: 500;
+  transition: 0.5s ease-in-out;
+}
+.c-header-out {
+  border: 1px solid #009970;
+}
+.c-header-in {
+  background-color: #009970;
+}
+
+/* News Cards */
+a {
+  text-decoration: none;
+} 
+
+.card-body {
+  padding: 1rem;
+}
+.card-text {
+  padding: 0 0.3rem;
+  font-size: smaller;
+}
+.nCard{
+  max-height: 25rem;
+  min-height: 25rem;
+  overflow-y: hidden;
+}
+.nCard img{
+  max-height: 15em;
+}
+.newsCards:hover {
+  box-shadow: 0 0 15px 1px #009970;
+  transition: 0.5s ease-in-out;
+}
+
+/* Pricing */
+.p1:hover {
+  box-shadow: 0 0 12px 1px #009970;
+  border-radius: 10px;
+  transition: 0.5s ease-in-out;
+}
+.p2:hover {
+  box-shadow: 0 0 17px 5px #009970;
+  border-radius: 10px;
+  transition: 0.5s ease-in-out;
+}
+
+/* Owner */
+
+.dp{
+  border-radius: 4% 0 0 0;
+}

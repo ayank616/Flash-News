@@ -1,0 +1,24 @@
+<% layout('./layouts/boilerplate') -%>
+
+  <body>
+      <div class="row mb-4">
+        <% for (article of news) { 
+          if (article.urlToImage && article.urlToImage != "null" && article.description != "null" && article.title != "null") { %>
+          <div class="col-lg-4 col-md-6 col-12 mt-4">
+            <a href=<%=article.url %> target="_blank">
+              <div class="newsCards card nCard">
+                <img src=<%=article.urlToImage %> class="card-img-top" alt="Image Not Found." onerror="this.parentNode.parentNode.style.display='none';"/>
+                <div class="card-body">
+                  <h5 class="card-title">
+                    <%= article.title %>
+                  </h5>
+                  <p class="card-text">
+                    <%= article.description %>
+                  </p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <% } } %>
+      </div>
+  </body>
